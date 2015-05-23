@@ -29,6 +29,8 @@ def preorder(n):
 	for e in n.children():
 		preorder(e)
 	print '#',
+
+# Serialize to String
 def serS(n):
 	if n is None:
 		return None
@@ -40,6 +42,8 @@ def serS(n):
 		s = s + r
 	s+= '#'
 	return s
+
+# Make Tree
 def mt(dq):
 	print dq
 	if ( (dq == None)  or (len(dq) == 0) ):
@@ -85,5 +89,3 @@ test(na)
 nc.add(ng)
 test(na)
 test(na)
-
-
