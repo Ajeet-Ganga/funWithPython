@@ -1,6 +1,15 @@
 import string
 import sys
 from collections import deque
+'''
+NODE = CHAR (Node)* '#'
+CHAR = (A-Z){1}
+
+e.g.
+A#	=>	_A_ _None_ '#'
+AB##	=>	_A_ _B_ _None_ '#' '#' 
+
+'''
 class N:
 	v = "-"
 	def __str__(self):
