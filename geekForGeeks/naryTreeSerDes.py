@@ -45,7 +45,7 @@ def serS(n):
 	return s
 
 # Make Tree
-def mt(dq):
+def deserializeTree(dq):
 	print dq
 	if ( (dq == None)  or (len(dq) == 0) ):
 		return None
@@ -54,7 +54,7 @@ def mt(dq):
 		return None
 	n = N(c)
 	while True:
-		ch = mt(dq)
+		ch = deserializeTree(dq)
 		print ch
 		if (ch is None):
 			break;
@@ -65,7 +65,7 @@ def mt(dq):
 
 def test(n):
 	serialStr = serS(n)
-	nDeserialized = mt(deque(serialStr))
+	nDeserialized = deserializeTree(deque(serialStr))
 	if serialStr != serS(nDeserialized):
 		print "Fail"
 		exit(-1)
