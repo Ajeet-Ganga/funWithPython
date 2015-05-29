@@ -6,8 +6,8 @@ NODE = CHAR (Node)* '#'
 CHAR = (A-Z){1}
 
 e.g.
-A#	=>	_A_ _None_ '#'
-AB##	=>	_A_ _B_ _None_ '#' '#' 
+A#	=>	_A_ (_None_) '#'
+AB##	=>	_A_ (_B_ (_None_) '#') '#'
 
 '''
 class N:
@@ -24,6 +24,7 @@ class N:
 	def children(self):
 		return self.c
 
+### CODE - start ###
 def preorder(n):
 	print n,
 	for e in n.children():
@@ -59,6 +60,8 @@ def mt(dq):
 			break;
 		n.add(ch)
 	return n
+### CODE - end ###
+
 
 def test(n):
 	serialStr = serS(n)
