@@ -1,7 +1,8 @@
 import collections
 import string
 import sys
-
+import plyj.parser
+import plyj.model as m
 
 ################################################################################
 ##### Functions
@@ -40,7 +41,7 @@ def getFields(fileName):
                 print('    ' + type_name0 + ' ' + type_name1 + ' ' + var_decl.variable.name)
                 fieldList.append((type_name0,type_name1,var_decl.variable.name))
     return fieldList;
-def todo1:
+def todo1():
 	N = collections.namedtuple('N','v,children')
 
 	for (c1,c2) in zip(string.lowercase,string.uppercase):
