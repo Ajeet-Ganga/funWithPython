@@ -1,8 +1,12 @@
+
 import collections
 import string
 import sys
 import plyj.parser
 import plyj.model as m
+from collections import defaultdict
+import glob
+import os
 
 ################################################################################
 ##### Functions
