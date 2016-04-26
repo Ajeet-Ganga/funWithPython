@@ -1,0 +1,11 @@
+name,age,number,string
+AA,2,1,a
+BB,4,2,b
+CC,6,3,c
+AA,7,4,d
+BB,2,5,a
+CC,5.1,6,b
+AA,5.4,7,c
+BB,5.7,8,d
+CC,6,9,a
+AA,6.3,10,b
