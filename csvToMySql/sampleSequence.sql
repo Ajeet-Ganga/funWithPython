@@ -16,6 +16,8 @@
 
 ## Option.1:  generate on local machine
 ## ./csvToSqlCreate.sh sample.csv
+# mysql -h10.9.214.82 -u auditWriter -p --local-infile=1
+## Don't forget the --local-infile=1
 # LOAD DATA INFILE '/Users/ajeetganga/git/funWithPython/csvToMySql/sample.csv' INTO TABLE audit.sample FIELDS TERMINATED BY ',' ENCLOSED BY '' ESCAPED BY '\\' LINES TERMINATED BY '\n' STARTING BY '';
 
 ## Option.2:  generate on-line.
