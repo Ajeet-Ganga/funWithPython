@@ -2,10 +2,19 @@
 #####################################################################################
 ### User creation
 ## mysql --user="root"
+
 CREATE USER 'auditWriter'@'localhost' IDENTIFIED BY 'writer';
 GRANT ALL PRIVILEGES ON audit.* TO 'auditWriter'@'localhost'  WITH GRANT OPTION;
+
 CREATE USER 'auditWriter'@'%' IDENTIFIED BY 'writer';
 GRANT ALL PRIVILEGES ON audit.* TO 'auditWriter'@'%'  WITH GRANT OPTION;
+
+CREATE USER 'auditReader'@'localhost' IDENTIFIED BY 'reader';
+GRANT SELECT, SHOW VIEW ON audit.* TO 'auditReader'@'localhost'  WITH GRANT OPTION;
+
+CREATE USER 'auditReader'@'%' IDENTIFIED BY 'reader';
+GRANT SELECT, SHOW VIEW ON audit.* TO 'auditReader'@'%'  WITH GRANT OPTION;
+
 create database audit;
 exit
 
